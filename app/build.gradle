@@ -26,13 +26,13 @@ android {
 
         debug{
             minifyEnabled true
-            buildConfigField("String", "BASE_URL", "https://hn.algolia.com/api/v1/search_by_date")
+            buildConfigField("String", "BASE_URL", "\"https://hn.algolia.com/api/v1/search_by_date\"")
         }
 
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "BASE_URL", "https://hn.algolia.com/api/v1/search_by_date")
+            buildConfigField("String", "BASE_URL", "\"https://hn.algolia.com/api/v1/search_by_date\"")
         }
     }
 
