@@ -1,4 +1,4 @@
-package com.aam.applydigitaltechnicalinterview.data
+package com.aam.applydigitaltechnicalinterview.data.core
 
 import com.aam.applydigitaltechnicalinterview.BuildConfig
 import retrofit2.Retrofit

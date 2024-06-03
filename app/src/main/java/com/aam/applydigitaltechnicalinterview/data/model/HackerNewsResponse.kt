@@ -1,4 +1,4 @@
-package com.aam.applydigitaltechnicalinterview.data
+package com.aam.applydigitaltechnicalinterview.data.model
 
 import com.google.gson.annotations.SerializedName
 

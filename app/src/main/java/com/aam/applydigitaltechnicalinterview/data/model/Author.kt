@@ -1,9 +1,9 @@
-package com.aam.applydigitaltechnicalinterview.data
+package com.aam.applydigitaltechnicalinterview.data.model
 
 import com.google.gson.annotations.SerializedName
 
 
-data class StoryTitle(
+data class Author(
 
     @SerializedName("matchLevel") var matchLevel: String? = null,
     @SerializedName("matchedWords") var matchedWords: ArrayList<String> = arrayListOf(),

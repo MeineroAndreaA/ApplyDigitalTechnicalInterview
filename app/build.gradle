@@ -26,13 +26,16 @@ android {
 
         debug{
             minifyEnabled true
-            buildConfigField("String", "BASE_URL", "\"https://hn.algolia.com/api/v1/search_by_date\"")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"https://hn.algolia.com/api/v1/\"")
+            buildConfigField("String", "PLATAFORM", "\"mobile\"")
         }
 
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "BASE_URL", "\"https://hn.algolia.com/api/v1/search_by_date\"")
+            buildConfigField("String", "BASE_URL", "\"https://hn.algolia.com/api/v1/\"")
+            buildConfigField("String", "PLATAFORM", "\"mobile\"")
         }
     }
 
@@ -75,8 +78,12 @@ dependencies {
 
     //region jetpack
 
-    implementation libs.androidx.activity.compose
     implementation platform(libs.androidx.compose.bom)
+    implementation libs.androidx.activity.compose
+    implementation (libs.ui)
+    implementation (libs.androidx.material)
+    implementation (libs.ui.tooling.preview)
+    implementation (libs.androidx.lifecycle.runtime.ktx.v281)
 
     //endregion
 
@@ -107,8 +114,5 @@ dependencies {
 
 
     //endregion
-
-
-
 
 }
