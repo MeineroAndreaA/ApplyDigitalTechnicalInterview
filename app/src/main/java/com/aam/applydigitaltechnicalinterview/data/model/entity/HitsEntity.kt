@@ -1,4 +1,4 @@
-package com.aam.applydigitaltechnicalinterview.domain.local
+package com.aam.applydigitaltechnicalinterview.data.model.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
