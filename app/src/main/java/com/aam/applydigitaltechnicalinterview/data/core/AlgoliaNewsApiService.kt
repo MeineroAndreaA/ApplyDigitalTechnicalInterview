@@ -1,6 +1,6 @@
 package com.aam.applydigitaltechnicalinterview.data.core
 
-import com.aam.applydigitaltechnicalinterview.data.model.HackerNewsResponse
+import com.aam.applydigitaltechnicalinterview.data.model.response.HackerNewsResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

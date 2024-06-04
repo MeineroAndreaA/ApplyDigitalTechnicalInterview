@@ -1,8 +1,8 @@
-package com.aam.applydigitaltechnicalinterview.domain
+package com.aam.applydigitaltechnicalinterview.domain.remote
 
 import com.aam.applydigitaltechnicalinterview.BuildConfig
 import com.aam.applydigitaltechnicalinterview.data.core.AlgoliaNewsApiService
-import com.aam.applydigitaltechnicalinterview.data.model.HackerNewsResponse
+import com.aam.applydigitaltechnicalinterview.data.model.response.HackerNewsResponse
 
 class RemoteDataSource(private val api: AlgoliaNewsApiService) : RemoteRepository {
 

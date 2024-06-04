@@ -1,4 +1,4 @@
-package com.aam.applydigitaltechnicalinterview.domain
+package com.aam.applydigitaltechnicalinterview.domain.remote
 
 import retrofit2.HttpException
 import retrofit2.Response

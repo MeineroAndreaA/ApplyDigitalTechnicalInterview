@@ -1,12 +1,9 @@
-package com.aam.applydigitaltechnicalinterview.data.model
+package com.aam.applydigitaltechnicalinterview.data.model.response
 
 import com.google.gson.annotations.SerializedName
 
 
 data class Hits (
-
-    @SerializedName("_highlightResult" ) var HighlightResult : HighlightResult?  = HighlightResult(),
-    @SerializedName("_tags"            ) var Tags            : ArrayList<String> = arrayListOf(),
     @SerializedName("author"           ) var author          : String?           = null,
     @SerializedName("comment_text"     ) var commentText     : String?           = null,
     @SerializedName("created_at"       ) var createdAt       : String?           = null,
