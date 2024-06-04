@@ -18,7 +18,8 @@ object LocalDataSourceInject {
     @Provides
     @Singleton
     fun provideDatabaseCreationInstance(@ApplicationContext context: Context): HackerNewsDB {
-        return Room.databaseBuilder(context, HackerNewsDB::class.java, "hacker_news_db").build()
+        return Room.databaseBuilder(context, HackerNewsDB::class.java, "hacker_news_db")
+            .fallbackToDestructiveMigration().build()
     }
 
     @Provides

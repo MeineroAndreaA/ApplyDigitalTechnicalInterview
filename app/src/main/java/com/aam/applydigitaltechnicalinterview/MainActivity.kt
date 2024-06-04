@@ -4,15 +4,17 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.aam.applydigitaltechnicalinterview.data.core.RetrofitModule
-import com.aam.applydigitaltechnicalinterview.domain.remote.RemoteDataSource
+import androidx.activity.viewModels
+import androidx.compose.runtime.collectAsState
 import com.aam.applydigitaltechnicalinterview.presentation.theme.ApplyDigitalTechnicalInterviewTheme
-import kotlinx.coroutines.runBlocking
+import com.aam.applydigitaltechnicalinterview.viewmodel.HackerNewsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        runBlocking { RemoteDataSource(RetrofitModule.api).getHackersNew() }
         enableEdgeToEdge()
         setContent {
             ApplyDigitalTechnicalInterviewTheme {

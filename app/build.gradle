@@ -73,6 +73,8 @@ dependencies {
     implementation libs.androidx.ui.graphics
     implementation libs.androidx.ui.tooling.preview
     implementation libs.androidx.material3
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.viewmodel.savedstate)
 
     //endregion
 
@@ -85,6 +87,7 @@ dependencies {
     implementation (libs.ui.tooling.preview)
     implementation (libs.androidx.lifecycle.runtime.ktx.v281)
     implementation (libs.error.prone.annotations)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     //endregion
 

@@ -6,7 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Hits")
 data class HitsEntity(
     @PrimaryKey(autoGenerate = true) val hitId: Int = 0,
-    var entries : Int? = null,
     var author: String? = null,
     var commentText: String? = null,
     var createdAt: String? = null,
