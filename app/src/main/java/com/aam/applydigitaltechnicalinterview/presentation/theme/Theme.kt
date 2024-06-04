@@ -1,4 +1,4 @@
-package com.aam.applydigitaltechnicalinterview.ui.theme
+package com.aam.applydigitaltechnicalinterview.presentation.theme
 
 import android.app.Activity
 import android.os.Build
