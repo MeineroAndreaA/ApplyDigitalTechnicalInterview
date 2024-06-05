@@ -20,6 +20,7 @@ lifecycleViewmodelSavedstate = "2.8.0"
 ksp = "1.9.21-1.0.16"
 material = "1.6.7"
 retrofit = "2.9.0"
+threetenabp = "1.4.7"
 ui = "1.6.7"
 uiToolingPreview = "1.6.7"
 rules = "1.5.0"
@@ -54,6 +55,7 @@ hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltA
 hilt-common = { module = "androidx.hilt:hilt-common", version.ref = "hiltCommon" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+threetenabp = { module = "com.jakewharton.threetenabp:threetenabp", version.ref = "threetenabp" }
 ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
 androidx-rules = { module = "androidx.test:rules", version.ref = "rules" }

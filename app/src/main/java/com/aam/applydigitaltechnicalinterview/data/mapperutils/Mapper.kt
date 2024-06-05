@@ -8,15 +8,13 @@ class Mapper {
     fun mapperToHitEntity(response: HackerNewsResponse): List<HitsEntity> {
         val listOfHitsEntities = response.listHits.map {
             HitsEntity(
+                title = (if (it.title.isNullOrEmpty()) it.storyTitle else it.title)!!,
                 author = it.author,
                 commentText = it.commentText,
                 createdAt = it.createdAt,
-                createdAtI = it.createdAtI,
-                objectID = it.objectID,
+                objectID = it.objectID!!,
                 storyId = it.storyId,
-                storyTitle = it.storyTitle,
-                storyUrl = it.storyUrl,
-                updatedAt = it.createdAt
+                storyUrl = (if (it.url.isNullOrEmpty()) it.storyUrl else it.url)
             )
         }
         return listOfHitsEntities
@@ -27,16 +25,16 @@ class Mapper {
         for (hitEntity in hitsList) {
             listHits.add(
                 Hits(
-                    hitEntity.author,
-                    hitEntity.commentText,
-                    hitEntity.createdAt,
-                    hitEntity.createdAtI,
-                    hitEntity.objectID,
-                    hitEntity.parentId,
-                    hitEntity.storyId,
-                    hitEntity.storyTitle,
-                    hitEntity.storyUrl,
-                    hitEntity.updatedAt
+                    objectID = hitEntity.objectID,
+                    author = hitEntity.author,
+                    commentText = hitEntity.commentText,
+                    createdAt = hitEntity.createdAt,
+                    parentId = hitEntity.parentId,
+                    storyId = hitEntity.storyId,
+                    storyUrl = hitEntity.storyUrl,
+                    url = hitEntity.storyUrl,
+                    title = hitEntity.title,
+                    storyTitle = hitEntity.title
                 )
             )
         }

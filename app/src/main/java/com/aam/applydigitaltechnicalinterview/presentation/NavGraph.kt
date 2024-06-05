@@ -1,5 +1,6 @@
 package com.aam.applydigitaltechnicalinterview.presentation
 
+import androidx.activity.viewModels
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.runtime.Composable
@@ -17,11 +18,12 @@ import com.aam.applydigitaltechnicalinterview.viewmodel.HackerNewsViewModel
 import com.aam.applydigitaltechnicalinterview.viewmodel.NavigationViewModel
 
 @Composable
-fun NavGraph(navigationViewModel: NavigationViewModel) {
+fun NavGraph() {
 
     val navController = rememberNavController()
+
+    val navigationViewModel: NavigationViewModel = hiltViewModel()
     val hackerNewsViewModel: HackerNewsViewModel = hiltViewModel()
-    hackerNewsViewModel.getAllHits()
     navigationViewModel.navController = navController
 
     val isSystemInDarkTheme = isSystemInDarkTheme()

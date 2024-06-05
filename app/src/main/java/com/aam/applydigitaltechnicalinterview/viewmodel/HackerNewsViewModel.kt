@@ -19,6 +19,10 @@ class HackerNewsViewModel @Inject constructor(
     private val localDataSource: LocalDataSource
 ) : ViewModel() {
 
+    init {
+        getAllHits()
+    }
+
     private val hits = MutableStateFlow<HackerNewsResponse?>(null)
     val _hits: StateFlow<HackerNewsResponse?> = hits
 
@@ -28,7 +32,7 @@ class HackerNewsViewModel @Inject constructor(
     private val error = MutableStateFlow(Pair(false, ""))
     val weGotAnError: StateFlow<Pair<Boolean, String>> = error
 
-    fun getAllHits() {
+    private fun getAllHits() {
         viewModelScope.launch {
             when (val response = remoteDataSource.getHackersNew()) {
                 is ApiCallResult.Error -> {
