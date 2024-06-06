@@ -12,8 +12,8 @@ import androidx.navigation.compose.rememberNavController
 import com.aam.applydigitaltechnicalinterview.data.navigation.ScreenRoutes
 import com.aam.applydigitaltechnicalinterview.presentation.screens.home.HomeScreen
 import com.aam.applydigitaltechnicalinterview.presentation.screens.web.WebViewScreen
-import com.aam.applydigitaltechnicalinterview.presentation.theme.DarkColorScheme
-import com.aam.applydigitaltechnicalinterview.presentation.theme.LightColorScheme
+import com.aam.applydigitaltechnicalinterview.presentation.theme.ui.DarkColorScheme
+import com.aam.applydigitaltechnicalinterview.presentation.theme.ui.LightColorScheme
 import com.aam.applydigitaltechnicalinterview.viewmodel.HackerNewsViewModel
 import com.aam.applydigitaltechnicalinterview.viewmodel.NavigationViewModel
 
