@@ -6,12 +6,12 @@ import org.jetbrains.annotations.NotNull
 
 @Entity(tableName = "Hits")
 data class HitsEntity(
-    @PrimaryKey var objectID: String,
+    @PrimaryKey var storyId: Int,
+    var objectID: String? = null,
     var title: String,
     var author: String? = null,
     var commentText: String? = null,
     var createdAt: String? = null,
     var parentId: Int? = null,
-    var storyId: Int? = null,
     var storyUrl: String? = null
 )

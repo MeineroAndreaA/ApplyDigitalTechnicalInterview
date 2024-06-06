@@ -12,8 +12,8 @@ class Mapper {
                 author = it.author,
                 commentText = it.commentText,
                 createdAt = it.createdAt,
-                objectID = it.objectID!!,
-                storyId = it.storyId,
+                objectID = it.objectID,
+                storyId = it.storyId!!,
                 storyUrl = (if (it.url.isNullOrEmpty()) it.storyUrl else it.url)
             )
         }

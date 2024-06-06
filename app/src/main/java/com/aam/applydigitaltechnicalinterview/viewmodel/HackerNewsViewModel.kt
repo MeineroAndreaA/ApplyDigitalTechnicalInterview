@@ -26,26 +26,34 @@ class HackerNewsViewModel @Inject constructor(
     private val hits = MutableStateFlow<HackerNewsResponse?>(null)
     val _hits: StateFlow<HackerNewsResponse?> = hits
 
-    private val loading = MutableStateFlow(true)
+    var urlNew = MutableStateFlow<String?>("")
+    val _urlNew: StateFlow<String?> = urlNew
+
+    val loading = MutableStateFlow(true)
     val isLoading: StateFlow<Boolean> = loading
 
     private val error = MutableStateFlow(Pair(false, ""))
     val weGotAnError: StateFlow<Pair<Boolean, String>> = error
 
-    private fun getAllHits() {
+    fun getAllHits() {
         viewModelScope.launch {
             when (val response = remoteDataSource.getHackersNew()) {
                 is ApiCallResult.Error -> {
-
+                    loading.value = false
+                    val hitsFromLocal = localDataSource.getAllHits()
+                    val mappedHits = Mapper().hackerNewsResponseMapped(hitsFromLocal)
+                    hits.value = mappedHits
                 }
 
                 is ApiCallResult.Exception -> {
+                    loading.value = false
                     val hitsFromLocal = localDataSource.getAllHits()
                     val mappedHits = Mapper().hackerNewsResponseMapped(hitsFromLocal)
                     hits.value = mappedHits
                 }
 
                 is ApiCallResult.Success -> {
+                    loading.value = false
                     hits.value = response.data
                     localDataSource.insertAllHits(Mapper().mapperToHitEntity(response.data))
                 }

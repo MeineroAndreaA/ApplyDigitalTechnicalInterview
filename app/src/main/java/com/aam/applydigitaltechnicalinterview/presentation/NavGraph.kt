@@ -1,6 +1,5 @@
 package com.aam.applydigitaltechnicalinterview.presentation
 
-import androidx.activity.viewModels
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.runtime.Composable
@@ -12,6 +11,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.aam.applydigitaltechnicalinterview.data.navigation.ScreenRoutes
 import com.aam.applydigitaltechnicalinterview.presentation.screens.home.HomeScreen
+import com.aam.applydigitaltechnicalinterview.presentation.screens.web.WebViewScreen
 import com.aam.applydigitaltechnicalinterview.presentation.theme.DarkColorScheme
 import com.aam.applydigitaltechnicalinterview.presentation.theme.LightColorScheme
 import com.aam.applydigitaltechnicalinterview.viewmodel.HackerNewsViewModel
@@ -51,7 +51,7 @@ fun NavGraph() {
             }
             composable(route = ScreenRoutes.WebDetail.route)
             {
-
+                WebViewScreen(navController = navController, hackerNewsViewModel)
             }
         }
 

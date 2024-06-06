@@ -11,6 +11,6 @@ interface HackerNewsDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAllHits(hits: List<HitsEntity>)
 
-    @Query("SELECT * FROM Hits")
+    @Query("SELECT * FROM Hits ORDER BY createdAt DESC")
     suspend fun getAllHits(): List<HitsEntity>
 }
