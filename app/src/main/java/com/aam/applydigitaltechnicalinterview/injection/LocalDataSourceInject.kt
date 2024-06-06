@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.aam.applydigitaltechnicalinterview.data.core.HackerNewsDB
 import com.aam.applydigitaltechnicalinterview.data.model.dao.HackerNewsDAO
+import com.jakewharton.threetenabp.AndroidThreeTen
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,7 +19,8 @@ object LocalDataSourceInject {
     @Provides
     @Singleton
     fun provideDatabaseCreationInstance(@ApplicationContext context: Context): HackerNewsDB {
-        return Room.databaseBuilder(context, HackerNewsDB::class.java, "hacker_news_db").build()
+        return Room.databaseBuilder(context, HackerNewsDB::class.java, "hacker_news_db")
+            .fallbackToDestructiveMigration().build()
     }
 
     @Provides
