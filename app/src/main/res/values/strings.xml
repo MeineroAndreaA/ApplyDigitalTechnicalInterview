@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ApplyDigitalTechnicalInterview</string>
+    <string name="swipe_text_delete">Delete</string>
+    <string name="url_not_found_toast">Esta historia no tiene una noticia asociada</string>
+    <string name="back_button_text">Back</string>
 </resources>

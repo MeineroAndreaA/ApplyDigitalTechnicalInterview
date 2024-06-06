@@ -1,4 +1,4 @@
-package com.aam.applydigitaltechnicalinterview.ui.theme
+package com.aam.applydigitaltechnicalinterview.presentation.theme.ui
 
 import androidx.compose.ui.graphics.Color
 
@@ -9,3 +9,5 @@ val Pink80 = Color(0xFFEFB8C8)
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
+
+val Grey40 = Color(0xFF5A5A5A)
