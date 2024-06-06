@@ -2,7 +2,6 @@ package com.aam.applydigitaltechnicalinterview.data.model.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import org.jetbrains.annotations.NotNull
 
 @Entity(tableName = "Hits")
 data class HitsEntity(

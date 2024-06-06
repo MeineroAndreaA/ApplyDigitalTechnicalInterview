@@ -12,12 +12,4 @@ class NavigationViewModel : ViewModel() {
     {
         navController.navigate(ScreenRoutes.WebDetail.route)
     }
-
-    fun backToHome()
-    {
-        navController.popBackStack()
-        navController.navigate(ScreenRoutes.Home.route)
-        navController.popBackStack()
-    }
-
 }

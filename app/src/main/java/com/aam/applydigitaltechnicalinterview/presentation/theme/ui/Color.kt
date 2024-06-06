@@ -1,4 +1,4 @@
-package com.aam.applydigitaltechnicalinterview.presentation.theme
+package com.aam.applydigitaltechnicalinterview.presentation.theme.ui
 
 import androidx.compose.ui.graphics.Color
 

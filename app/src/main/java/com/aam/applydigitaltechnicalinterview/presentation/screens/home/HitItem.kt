@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.aam.applydigitaltechnicalinterview.R
 import com.aam.applydigitaltechnicalinterview.data.model.response.Hits
 import com.aam.applydigitaltechnicalinterview.presentation.screens.home.utils.formatDate
-import com.aam.applydigitaltechnicalinterview.presentation.theme.Grey40
+import com.aam.applydigitaltechnicalinterview.presentation.theme.ui.Grey40
 
 @Composable
 fun HitItem(hits: Hits, onItemClick: () -> Unit) {
